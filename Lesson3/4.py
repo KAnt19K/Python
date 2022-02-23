@@ -11,22 +11,45 @@
 '''
 
 
-def my_func(x, y):
-    return x ** y
+def my_func(x1, y1):
+    return x1 ** y1
+
+x1 = float(input('Введите положительное число'))
+while x1 <= 0:
+    print('Вы ввели отрицательное число или 0')
+    x1 = float(input('Введите положительное число'))
+    continue
+
+y1 = int(input('Введите отрицательное число '))
+while y1 = > 0:
+    print('Вы ввели положительное число или 0')
+    y1 = int(input('Введите отрицательное число'))
+    continue
+
+print(my_func(x1, y1))
+
+
+def my_func2(x, y):
+    x = 1 / x
+    y = abs(y)
+    a = 1
+    i = 0
+    while i < y:
+        a = a * x
+        i += 1
+    return a
 
 
 x = float(input('Введите положительное число'))
-while True:
-    if x < 0:
-        print('Вы ввели отрицательное число')
-        x = float(input('Введите положительное число'))
+while x <= 0:
+    print('Вы ввели отрицательное число или 0')
+    x = float(input('Введите положительное число'))
     continue
 
 y = int(input('Введите отрицательное число'))
-while True:
-    if y > 0:
-        print('Вы ввели положительное число')
-        y = int(input('Введите отрицательное число'))
+while y >= 0:
+    print('Вы ввели положительное число или 0')
+    y = int(input('Введите отрицательное число'))
     continue
 
-print(my_func(x, y))
+print(my_func2(x, y))
