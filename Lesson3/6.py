@@ -14,13 +14,18 @@
 
 def int_func():
     word = input('Введите слова маленькими латинскими буквами').split()
-    print(word[0].title())
+    word[0] = word[0].title()
+    for el in range(len(word)):
+        print(word[el], end=" ")
+
 
 int_func()
 
+
 def int_func2():
     word = input('Введите слова маленькими латинскими буквами').split()
-    for i in range(len(word)):
-        print(word[i].title(), end=" ")
+    for el in range(len(word)):
+        print(word[el].title(), end=" ")
+
 
 int_func2()
