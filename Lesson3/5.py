@@ -10,21 +10,20 @@
 '''
 
 
-def my_func(args):
+def my_func():
     while True:
-        my_str = input('Введите числа через пробел. Для выхода напишите 000').split()
-        if my_str == 000:
+        my_str = input('Введите числа через пробел. Для выхода напишите Q').split()
+        if 'Q' in  my_str:
             break
         else:
-            i = 0
-            for number in my_str:
-                number = int(number)
-                my_list.append(number)
+            for el in my_str:
+                el = int(el)
+                my_list.append(el)
                 result = sum(my_list)
-                i += 1
-        print(result)
+            print(result)
         continue
+    print('Ваша итоговая сумма', result)
 
 
 my_list = []
-print(my_func(my_list))
+my_func()
