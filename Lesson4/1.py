@@ -17,3 +17,16 @@ try:
     print('Зарплата сотрудника составила', result)
 except ValueError:
     print('Вы не ввели цифры')
+
+
+def my_func():
+    try:
+        time = int(input('Введите количество отработанных часов'))
+        salary = int(input('Введите стоимость одного часа'))
+        bonus = int(input('Введите сумму премии'))
+        result = time * salary + bonus
+        print('Зарплата сотрудника составила', result)
+    except ValueError:
+        print('Вы не ввели цифры')
+
+my_func()
