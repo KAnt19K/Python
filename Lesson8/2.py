@@ -4,19 +4,21 @@
 делителя программа должна корректно обработать эту ситуацию и не завершиться с ошибкой.
 '''
 
-# class OwnError(Exception):
-#     def __init__(self, txt):
-#         self.txt = txt
 
-number_1 = input('Введите числитель')
-number_2 = input('Введите знаменатель')
+class Division:
+    def __init__(self, number_1, number_2):
+        self.number_1 = number_1
+        self.number_2 = number_2
 
-try:
-    number_1 = int(number_1)
-    number_2 = int(number_2)
-    result = number_1/number_2
-    print(result)
-except ZeroDivisionError:
-    print('В знаменателе ввели ноль')
-except ValueError:
-    print('В одном из частных введено не число')
+    @staticmethod
+    def division_null(number_1, number_2):
+        try:
+            return (number_1/number_2)
+        except ZeroDivisionError:
+            return ('В знаменателе ввели ноль')
+
+
+my_del = Division(10,5)
+print(Division.division_null(10, 5))
+print(Division.division_null(10, 0))
+
